@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { PROJECT_NAME } from './constants';
-
+import { AiOutlineDashboard } from 'react-icons/ai';
 // PUBLIC_INTERFACE
 function App() {
   const [theme, setTheme] = useState('light');
@@ -20,6 +20,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* Icon in header for prominent branding */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.8rem',
+          marginBottom: '2rem',
+          justifyContent: 'center'
+        }}>
+          <AiOutlineDashboard size={40} color="var(--text-secondary)" aria-label="Dashboard Icon" />
+          <span style={{ fontWeight: 700, fontSize: "2.2rem", letterSpacing: "1px", color: "var(--text-primary)" }}>
+            {PROJECT_NAME}
+          </span>
+        </div>
         <button 
           className="theme-toggle" 
           onClick={toggleTheme}
@@ -27,10 +40,6 @@ function App() {
         >
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
-        {/* Dashboard project name for prominent branding */}
-        <h1 style={{ fontWeight: 700, fontSize: "2.2rem", letterSpacing: "1px", marginBottom: "1rem" }}>
-          {PROJECT_NAME}
-        </h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
