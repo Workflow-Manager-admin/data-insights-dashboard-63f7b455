@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { PROJECT_NAME } from './constants';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -26,6 +27,10 @@ function App() {
         >
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
+        {/* Dashboard project name for prominent branding */}
+        <h1 style={{ fontWeight: 700, fontSize: "2.2rem", letterSpacing: "1px", marginBottom: "1rem" }}>
+          {PROJECT_NAME}
+        </h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
