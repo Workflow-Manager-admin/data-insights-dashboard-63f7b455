@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import { PROJECT_NAME } from './constants';
 import { AiOutlineDashboard } from 'react-icons/ai';
+
+// Debugging Supabase credentials: These logs help verify if the environment variables are being loaded properly.
+// You may remove these lines after confirming the correct values appear in the browser console.
+console.log('SUPABASE_URL', process.env.REACT_APP_SUPABASE_URL);
+console.log('SUPABASE_KEY', process.env.REACT_APP_SUPABASE_KEY);
+
 // PUBLIC_INTERFACE
 function App() {
   const [theme, setTheme] = useState('light');
